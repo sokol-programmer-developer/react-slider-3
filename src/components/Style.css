@@ -1,0 +1,177 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*,*::before,*::after{ padding: 0;  margin: 0;  box-sizing: border-box; user-select: none}
+
+.carousel_section,
+.carousel_container,
+.carousel_wrapper,
+.carousel_content-wrapper,
+.carousel_content,
+.carousel_arrow,
+.left_arrow,
+.right_arrow,
+.button,
+.slider_section,
+.slider_pic,
+.slider_content,
+.slider_text,
+.slider_h2,
+.slider_h3,
+.slider_button,
+.slider_button_h2
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    position: relative;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.carousel_section,
+.carousel_container,
+.carousel_wrapper,
+.carousel_content_wrapper{
+    width: 100vw;
+    height: 100vh;
+}
+
+.carousel_content_wrapper {
+    overflow: hidden;
+}
+
+.carousel_content {
+    grid-template-columns: repeat(5,1fr);
+    width: 100vw;
+    height: 100vh;
+    right: -200vw;
+    transition: all 250ms linear;
+}
+
+/* hide scrollbar in webkit browser */
+.carousel_content::-webkit-scrollbar, .carousel_content::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel_content > * {
+    width: 100vw;
+    height: 100vh;
+}
+
+.carousel_arrow{
+    grid-template-columns: repeat(2,1fr);
+    width: 90vw;
+    left: 0;
+}
+
+.left_arrow, .right_arrow {
+    position: absolute;
+    width: 4vw;
+    height: 7vh;
+    top: 50vh;
+
+    font-size: 4vh;
+
+    z-index: 1;
+    transform: translateY(-50%);
+    border-radius: 5vh;
+    background-color: rgba(255,255,255,0.8);
+    border: 0.1vh solid #ddd;
+}
+
+.left_arrow { left: 2.5vw; }
+
+.right_arrow { right: 2.5vw;}
+
+.left_arrow:hover,
+.right_arrow:hover{
+    background-color: rgba(0,0,0,0.5);
+    color: rgba(255,255,255,0.8);
+}
+
+.left_arrow:active,
+.right_arrow:active{
+    color: #ffa500;
+}
+
+.slider_section{
+    width: 100vw;
+    height: 100vh;
+}
+
+.slider_pic{
+    width: 100vw;
+    height: 100vh;
+    top: 25vh;
+}
+
+.slider_content{
+    grid-template-rows: repeat(2,1fr);
+    width: 75vw;
+    height: 50vh;
+    bottom: 50vh;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 5vh;
+}
+
+.slider_text{
+    width: 75vw;
+    height: 24vh;
+    font-size: 4vh;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    color: rgba(0,0,0,0.8);
+}
+
+.slider_h2{
+    width: 75vw;
+    height: 10vh;
+    font-size: 4vh;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    color: rgba(0,0,0,0.8);
+}
+
+.slider_h3{
+    width: 75vw;
+    height: 10vh;
+    font-size: 4vh;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    color: rgba(0,0,0,0.8);
+}
+
+.slider_button{
+    width: 20vw;
+    height: 10vh;
+    background-color:  rgba(255,255,255,0.8);
+    cursor: pointer;
+    border: none;
+    border-radius: 5vh;
+}
+
+.slider_button_h2{
+    width: 20vw;
+    height: 10vh;
+    font-size: 4vh;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    color: rgba(0,0,0,0.8);
+}
+
+.slider_button:hover{
+    background-color:  rgba(0,0,0,0.6);
+}
+
+.slider_button:hover .slider_button_h2{
+    color: rgba(255,255,255,0.8);
+}
+
+.slider_button:active .slider_button_h2{
+    color: #ffa500;
+}
