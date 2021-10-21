@@ -13,7 +13,7 @@ const Carousel = (props) => {
             setCurrentId(currentId === children.length-1 ? 0 : currentId + 1);
         }, 5000);
         return () => clearInterval(interval);
-    }, [currentId]);
+    }, [currentId, children.length]);
 
     useEffect(() => {
         setLength(children.length)
